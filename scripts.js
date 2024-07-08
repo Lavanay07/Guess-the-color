@@ -1,9 +1,10 @@
 const colorCodecon = document.getElementById("color-code");
 const optionContainer = document.getElementById("options-container");
 const scorecontainer = document.getElementById("score");
+const messageContainer = document.getElementById("message-container"); 
 let randomColor = null; // corrected initialization
 let score = 0;
-
+const a = ["Kya itna bura hai Lala","Lalalalala LALA","Rang de mrko ","Abe sale","lala ko pehchan na ski","Nopp","Racist ","Lala ka rang badal diye"];
 function generate(min, max) {
     return min + Math.floor(Math.random() * (max - min + 1));
 }
@@ -28,8 +29,21 @@ function validateresult(el) {
     console.log(randomColor)
     if (selectedcolor === randomColor) {
         console.log("sahi haii");
+        if(score === 2){
+            messageContainer.innerText = "Bas kr ja BKL";
+        }
+        else{
+        messageContainer.innerText = "Tu hi pehchan paya Lala ke asli rang";
+        }
         increment();
+      
     } else {
+        let ind = generate(0,7);
+        let mess = a[ind];
+       
+        
+        messageContainer.innerText = `${mess}`;
+        
         score = 0;
     }
 

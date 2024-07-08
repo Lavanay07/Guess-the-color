@@ -6,6 +6,7 @@
     <title>Guess the color</title>
     <style>
         body{
+            /* align-items: center; */
             font-family : "Segoe UI",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif,
         }
         #options-container{
@@ -20,18 +21,22 @@
         cursor: pointer;
       }
       #options-container > div:hover {
+        
         scale: 1.2;
         transition: 1s all;
       }
     </style>
 </head>
     <div>
-    <h1 id = 'color-code'></h1  >
+        <h1>Guess The rang of Lala</h1>
+    <h1 id = 'color-code'> </h1  >
     </div>
     <div>
         <h4 >Score : <span id = "score"></span></h4>
     </div>
     <div id = "options-container"></div>
+    <br>
+    <div id = "message-container"></div>
     <script src="scripts.js"></script>
 <body>
    
